@@ -109,40 +109,106 @@
 // console.log(recursion(1000));
 
 
-let number;
-let attemps;
-function resetGame() {
-    attemps = 0;
-    number = Math.floor(Math.random() * 100)
-    console.log(number);
+// let number;
+// let attemps;
+// function resetGame() {
+//     attemps = 0;
+//     number = Math.floor(Math.random() * 100)
+//     console.log(number);
+// }
+
+
+// function tryGuessNumber() {
+//     const userAnswer = prompt('Enter number from 1 to 100');
+
+//     if (userAnswer === -1) return alert('Game Over!')
+
+//     if (isNaN(userAnswer)) {
+//         alert('Enter number from 1 to 100');
+//         tryGuessNumber();
+//         return;
+//     }
+
+//     attemps++;
+
+//     if (userAnswer > number) {
+//         alert('Try low number')
+//     } else if (userAnswer < number) {
+//         alert('Try many number')
+//     } else {
+//         alert('Congratulation! Count attemps: ' + attemps);
+//         if (!confirm('Do u want play again?')) return alert('Game Over');
+//         resetGame();
+//     }
+//     tryGuessNumber();
+// }
+
+// resetGame();
+// tryGuessNumber();
+
+
+
+// var a = 15;
+// var b = -15;
+
+// if (a > 0 && b > 0) console.log(a - b);
+// if (a < 0 && b < 0) console.log(a * b);
+// if (a < 0 && b > 0 || a > 0 && b < 0) console.log(a + b);
+
+
+// var c = 1;
+// switch (c) {
+//     case 1: console.log(c++);
+//     case 2: console.log(c++);
+//     case 3: console.log(c++);
+//     case 4: console.log(c++);
+//     case 5: console.log(c++);
+//     case 6: console.log(c++);
+//     case 7: console.log(c++);
+//     case 8: console.log(c++);
+//     case 9: console.log(c++);
+//     case 10: console.log(c++);
+//     case 11: console.log(c++);
+//     case 12: console.log(c++);
+//     case 13: console.log(c++);
+//     case 14: console.log(c++);
+//     case 15: console.log(c);
+// }
+
+function sum(num1, num2) {
+    return num1 + num2;
+}
+
+function subtraction(num1, num2) {
+    return num1 - num2;
+}
+
+function multiplication(num1, num2) {
+    return num1 * num2;
+}
+
+function division(num1, num2) {
+    if (num2 == 0) {
+        return 'num2 != 0'
+    }
+    return num1 / num2;
 }
 
 
-function tryGuessNumber() {
-    const userAnswer = prompt('Enter number from 1 to 100');
+// console.log(sum(100, 20));
+// console.log(subtraction(100, 20));
+// console.log(multiplication(100, 20));
+// console.log(division(100, 20));
 
-    if (userAnswer === -1) return alert('Game Over!')
 
-    if (isNaN(userAnswer)) {
-        alert('Enter number from 1 to 100');
-        tryGuessNumber();
-        return;
+function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+        case '+': return arg1 + arg2;
+        case '-': return arg1 - arg2;
+        case '*': return arg1 * arg2;
+        case '/': return arg1 / arg2;
+        default: return `Type math symbol like ' + ', ' - ' ' * ', ' / '`
     }
-
-    attemps++;
-
-    if (userAnswer > number) {
-        alert('Try low number')
-    } else if (userAnswer < number) {
-        alert('Try many number')
-    } else {
-        alert('Congratulation! Count attemps: ' + attemps);
-        if (!confirm('Do u want play again?')) return alert('Game Over');
-        resetGame();
-    }
-    tryGuessNumber();
 }
 
-resetGame();
-tryGuessNumber();
-
+console.log(mathOperation(40, 20, 'dd'));
